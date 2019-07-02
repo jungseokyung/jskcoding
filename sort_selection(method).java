@@ -18,7 +18,7 @@ public class Sort_selection {
  }
 
  public static int min(int [] arr,int start) { 
-  //start:¾îµğ¼­ºÎÅÍ ºñ±³ÇÒÁö¸¦ Á¤ÇÏ´Â º¯¼ö
+  //start:ì–´ë””ì„œë¶€í„° ë¹„êµí• ì§€ë¥¼ ì •í•˜ëŠ” ë³€ìˆ˜
   int min_index=start;
   //start i from 1
   for(int i=start+1; i<arr.length-1; i++) {
