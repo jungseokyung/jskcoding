@@ -20,7 +20,7 @@ public class selection_sort{
  Scanner input=new Scanner(System.in);
  System.out.print("Input Array:");
  
- for(int i=0; i<array.length; i++) {//ÀÔ·Â 
+ for(int i=0; i<array.length; i++) {//ìž…ë ¥ 
   array[i]=input.nextInt();
  }
  //2 9 5 4 8 1 6
@@ -29,10 +29,10 @@ public class selection_sort{
   min=array[start-1]; //min=array[0] = 2
   //fix the compare value 
   for(int i=start; i<array.length; i++) {// start : 
-   //start i from 1 //start: ¾îµð¼­ºÎÅÍ ºñ±³¸¦ ÇÒÁö.    
+   //start i from 1 //start: ì–´ë””ì„œë¶€í„° ë¹„êµë¥¼ í• ì§€.    
    if(array[i]<min) { //Find Smallest number 
-     //i=5ÀÏ¶§ ¼º¸³.
-    swap=min;//swap=2 ÀúÀå
+     //i=5ì¼ë•Œ ì„±ë¦½.
+    swap=min;//swap=2 ì €ìž¥
     
     min=array[i];//min=1 
     
@@ -41,7 +41,7 @@ public class selection_sort{
    
   }//for
   
-  for(int i=0; i<7; i++) { //print process °úÁ¤ Ãâ·Â
+  for(int i=0; i<7; i++) { //print process ê³¼ì • ì¶œë ¥
    System.out.print(" "+array[i]);
   }
   
