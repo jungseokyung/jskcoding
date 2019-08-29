@@ -1,0 +1,50 @@
+import java.util.Scanner;
+public class binary_search {
+
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.out.println("Enter a sizeof array:");
+	
+		Scanner input=new Scanner(System.in);
+		int length=input.nextInt();
+		
+		int []bin=new int [length];
+		
+		System.out.println("Enter an array:");
+		
+		for(int i=0; i<bin.length; i++) {//Array 
+			bin[i]=input.nextInt();
+			
+		}
+		
+		System.out.println("Enter a number to find in array:");
+		int key=input.nextInt();
+		
+		System.out.println("The "+key+" is in "+BinarySearch(bin,key));
+	} 
+
+	
+	public static int BinarySearch(int []bin,int key) {
+		int low=0; //배열 처음부터 시작하므로, low를 0으로 선언.
+		int high=bin.length-1; //배열 크기보다, 하나 작은  high를 선언.
+		
+		//low는 배열찾기의 시작작부분, high는 배열찾기의 끝부분.
+		
+		while(high>=low) { //low가 high보다 커질때까지, 계속 반복.
+			int mid=(int)(bin.length/2);
+			if(key<bin[mid])// 찾는 값이, 중간 값보다 작다면,
+				high=mid-1; //high를 하나씩 줄여간다.
+			else if(key==bin[mid])
+				return mid;
+			else //더 낮으면,
+				low=mid+1;
+		}
+		
+		return -1-low;
+		
+	}
+	
+	
+}
